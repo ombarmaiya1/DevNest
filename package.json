@@ -1,0 +1,30 @@
+{
+  "name": "devnest",
+  "version": "1.0.0",
+  "description": "Devnest - Cloud-first IDE with local-first IndexedDB and standalone local agent execution",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "npm run test:all",
+    "test:all": "npm run test:backend && npm run test:local-agent && npm run test:frontend",
+    "test:backend": "node test/backend/test-milestone-5.js",
+    "test:local-agent": "node test/local-agent/test-milestone-10.js && node test/local-agent/test-milestone-11.js",
+    "test:frontend": "node test/frontend/test-milestone-6.js && node test/frontend/test-milestone-7.js && node test/frontend/test-milestone-8.js && node test/frontend/test-milestone-9.js && node test/frontend/test-devnest-managed-workspace.js && node test/frontend/test-indexeddb-local-first.js && node test/frontend/test-milestone-12.js && node test/frontend/test-milestone-13.js",
+    "test:m5": "node test/backend/test-milestone-5.js",
+    "test:m6": "node test/frontend/test-milestone-6.js",
+    "test:m7": "node test/frontend/test-milestone-7.js",
+    "test:m8": "node test/frontend/test-milestone-8.js",
+    "test:m9": "node test/frontend/test-milestone-9.js",
+    "test:m10": "node test/local-agent/test-milestone-10.js",
+    "test:m11": "node test/local-agent/test-milestone-11.js",
+    "test:m12": "node test/frontend/test-milestone-12.js",
+    "test:m13": "node test/frontend/test-milestone-13.js",
+    "test:managed-workspace": "node test/frontend/test-devnest-managed-workspace.js",
+    "test:indexeddb": "node test/frontend/test-indexeddb-local-first.js",
+    "build:frontend": "npm --prefix frontend run build",
+    "start:backend": "npm --prefix backend start",
+    "start:local-agent": "npm --prefix local-agent start",
+    "dev:frontend": "npm --prefix frontend run dev"
+  }
+}
+
